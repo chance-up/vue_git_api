@@ -1,4 +1,4 @@
-# vue2
+# search_git_user
 
 ## Project setup
 ```
