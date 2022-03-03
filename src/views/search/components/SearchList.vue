@@ -1,15 +1,13 @@
 <template>
   <div>
     <ul>
-      <li v-for="(userItem, index) in userItems" :key="userItem" class="shadow">
-        <i
+      <li v-for="(gitUser, index) in gitUsers" :key="gitUser" class="shadow">
+        <!-- <i
           class="fas fa-check checkBtn"
           :class="{ checkBtnCompleted: userItem.completed }"
           @click="toggleComplete(userItem, index)"
-        ></i>
-        <span :class="{ textCompleted: userItem.completed }">{{
-          userItem.item
-        }}</span>
+        ></i> -->
+        <span>{{ gitUser.id }}</span>
 
         <span class="removeBtn" @click="removeUser(userItem, index)">
           <i class="fas fa-trash-alt"></i>
@@ -20,15 +18,31 @@
 </template>
 
 <script>
+import { computed } from 'vue'
+import { useStore } from 'vuex'
+
+function useValue() {
+  const store = useStore()
+  const gitUsers = computed(() => store.getters['getGitUsers'])
+
+  return {
+    gitUsers,
+  }
+}
 export default {
   emits: ['deleteUserItemEvent'],
+  setup() {
+    return {
+      ...useValue(),
+    }
+  },
   computed: {
-    userItems() {
-      return this.$store.getters.getUserItems
-    },
+    // userItems() {
+    //   //return this.$store.getters.getUserItems
+    // },
   },
   mounted() {
-    this.$store.dispatch('loadGitUsers')
+    //this.$store.dispatch('getGitUsers')
   },
   methods: {
     removeUser(userItem, index) {

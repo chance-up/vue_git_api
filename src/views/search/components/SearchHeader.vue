@@ -1,11 +1,28 @@
 <template>
   <div id="app">
-    <h1>{{ $store.state.headerText }}</h1>
+    <h1>{{ headerText }}</h1>
   </div>
 </template>
 
 <script>
-export default {}
+import { computed } from 'vue'
+import { useStore } from 'vuex'
+
+function useHeaderText() {
+  const store = useStore()
+  //const headerText = computed(() => store.state.searchViewModel.headerText)
+  const headerText = computed(() => store.getters['getHeaderText'])
+  return {
+    headerText,
+  }
+}
+export default {
+  setup() {
+    return {
+      ...useHeaderText(),
+    }
+  },
+}
 </script>
 
 <style scoped>
