@@ -10,6 +10,8 @@ axios.interceptors.request.use(
   },
   (error) => Promise.reject(error.response)
 )
+export default axios
+
 // axios.interceptors.response.use((res) => {
 //   if (typeof res.data !== 'object') {
 //     ElMessage.error('server exception')
@@ -25,5 +27,3 @@ axios.interceptors.request.use(
 
 //   return res.data.data
 // })
-
-export default axios

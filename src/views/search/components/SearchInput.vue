@@ -7,7 +7,7 @@
       @input="changeSearchText"
     />
     <span class="addContainer" @click="getGitUsers">
-      <i class="fas fa-plus addBtn"></i>
+      <i class="fas fa-plus addBtn" />
     </span>
   </div>
 </template>

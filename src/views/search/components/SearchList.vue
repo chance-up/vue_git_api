@@ -2,15 +2,11 @@
   <div>
     <ul>
       <li v-for="(gitUser, index) in gitUsers" :key="gitUser" class="shadow">
-        <!-- <i
-          class="fas fa-check checkBtn"
-          :class="{ checkBtnCompleted: userItem.completed }"
-          @click="toggleComplete(userItem, index)"
-        ></i> -->
-        <span>{{ gitUser.id }}</span>
+        <img :src="gitUser.avatar_url" alt="..." class="img-thumbnail" />
+        <span>{{ gitUser.login }}</span>
 
-        <span class="removeBtn" @click="removeUser(userItem, index)">
-          <i class="fas fa-trash-alt"></i>
+        <span class="likeBtn" @click="removeUser(userItem, index)">
+          <i class="fa fa-heart" />
         </span>
       </li>
     </ul>
@@ -83,8 +79,8 @@ li {
   text-decoration: line-through;
   color: #b3adad;
 }
-.removeBtn {
+.likeBtn {
   margin-left: auto;
-  color: #de4343;
+  color: #d8d6d6;
 }
 </style>

@@ -1,41 +1,71 @@
 <template>
-  <div id="myTab">
-    <input v-model="message" />
-    <p>메시지: {{ message }}</p>
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-info">
+            <div class="inner">
+              <h3>150</h3>
 
-    <input v-html="rawHtml" />
-    <p>Using mustaches: {{ rawHtml }}</p>
-    <p>Using v-html directive: <span v-html="rawHtml" /></p>
+              <p>New Orders</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-bag" />
+            </div>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-success">
+            <div class="inner">
+              <h3>53<sup style="font-size: 20px">%</sup></h3>
 
-    <p v-if="seen">이제 나를 볼 수 있어요</p>
-    <img :src="vueLogo" />
+              <p>Bounce Rate</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-stats-bars" />
+            </div>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-warning">
+            <div class="inner">
+              <h3>44</h3>
 
-    <button @click="increment">+</button>
-    <button @click="decrement">-</button>
-    <h1>카운터 : {{ num }}</h1>
-  </div>
+              <p>User Registrations</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add" />
+            </div>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-danger">
+            <div class="inner">
+              <h3>65</h3>
+
+              <p>Unique Visitors</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-pie-graph" />
+            </div>
+          </div>
+        </div>
+        <!-- ./col -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+  </section>
 </template>
 
 <script>
-export default {
-  // ES6문법
-  el: '#myTab',
-  data: function () {
-    return {
-      message: 'Some Message',
-      rawHtml: 'tttttt',
-      seen: false,
-      vueLogo: 'https://picsum.photos/id/237/200/300',
-      num: 0,
-    }
-  },
-  methods: {
-    increment: function () {
-      this.num++
-    },
-    decrement: function () {
-      this.num--
-    },
-  },
-}
+export default {}
 </script>

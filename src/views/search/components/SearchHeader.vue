@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <h1>{{ headerText }}</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" />
   </div>
 </template>
 

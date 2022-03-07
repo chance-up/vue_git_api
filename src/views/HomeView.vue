@@ -1,28 +1,28 @@
 <template>
-  <div id="myHome">
-    <h1>About</h1>
+  <div>
+    <h1>111ßs</h1>
   </div>
 </template>
 
 <script>
 export default {
-  el: "#myHome",
+  el: '#myHome',
   data: function () {
     return {
-      message: "helloWorld",
-    };
+      message: 'helloWorld',
+    }
   },
   beforeCreate: function () {
-    console.log("beforeCreate");
+    console.log('beforeCreate')
   },
   created: function () {
-    console.log("created");
+    console.log('created')
   },
   mounted: function () {
-    console.log("mounted");
+    console.log('mounted')
   },
   updated: function () {
-    console.log("updated");
+    console.log('updated')
   },
-};
+}
 </script>

@@ -4,7 +4,6 @@ module.exports = {
     'vue/singleline-html-element-content-newline': 'off',
     'vue/multiline-html-element-content-newline': 'off',
     'vue/html-self-closing': 'off',
-    'vue/no-v-html': 'off',
     'vue/max-attributes-per-line': 'off',
     'vue/no-unused-vars': 'off',
   },

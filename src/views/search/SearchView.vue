@@ -13,9 +13,9 @@ import SearchList from '@/views/search/components/SearchList'
 
 export default {
   components: {
-    SearchHeader: SearchHeader,
-    SearchInput: SearchInput,
-    SearchList: SearchList,
+    SearchHeader,
+    SearchInput,
+    SearchList,
   },
   data() {
     return {

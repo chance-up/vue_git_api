@@ -62,15 +62,6 @@ const actions = {
     const response = await getGitUsersApi(state.searchText)
     commit('setGitUsers', response.data.items)
     console.log('get Git Users : ', state.gitUsers)
-
-    // if (response.data.total_count === 0) {
-    //   commit('fetchListCount', response.data.total_count)
-    //   commit('emptyList')
-    // } else {
-    //   commit('fetchUserInfo', response.data.items)
-    //   commit('fetchListCount', response.data.total_count)
-    //   commit('nonEmptyList')
-    // }
   },
 }
 

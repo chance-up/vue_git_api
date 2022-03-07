@@ -1,7 +1,10 @@
+import { FormCheckboxPlugin } from 'bootstrap-vue'
+import { ssrContextKey } from 'vue'
 import { createStore } from 'vuex'
 import searchViewModel from './modules/searchViewModel'
 
 export default createStore({
+  //안녕하세욤,,
   modules: {
     searchViewModel,
   },
